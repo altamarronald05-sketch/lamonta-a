@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Completo de Productos | Distribuciones La Montaña SAS (La Montaña Aaron)</title>
+  <meta name="description" content="Catálogo interactivo con las 53 referencias oficiales de quesos, chorizos santarrosanos, tocineta ahumada y lácteos de Distribuciones La Montaña SAS. Precios al detal, por docena y canastilla mayorista.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo_montana_aaron.svg">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div>🚛 <strong>Precios Directos de Distribución</strong> con descuentos automáticos por volumen</div>
+    <div class="pill-info">📦 53 Referencias con Cadena de Frío Garantizada</div>
+  </div>
+
+  <!-- Header & Navbar Flotante -->
+  <header class="header-nav">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/images/logo_montana_aaron.svg" alt="Distribuciones La Montaña SAS" class="brand-logo-img">
+        <div class="brand-title-box">
+          <span class="brand-name">LA MONTAÑA</span>
+          <span class="brand-subtitle">Catálogo Oficial • NIT 901712016</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="catalogo.html" class="nav-link active">Catálogo Completo <span class="nav-badge-new">53 Refs</span></a></li>
+          <li><a href="mayoristas.html" class="nav-link">Canal Mayoristas &amp; HORECA</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros &amp; Calidad</a></li>
+          <li><a href="contacto.html" class="nav-link">Cobertura &amp; Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="mayoristas.html" class="btn-b2b-pill">
+          <span>💼 Canal B2B</span>
+        </a>
+        <button class="btn-cart-toggle" id="btnOpenCart" aria-label="Ver pedido">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          <span>Pedido</span>
+          <span class="cart-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cabecera de Página Catálogo -->
+  <div style="background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%); border-bottom: 1px solid var(--border-subtle); padding: 40px 24px 20px;">
+    <div style="max-width: 1320px; margin: 0 auto;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="section-kicker">Inventario Oficial 2026</span>
+        <h1 class="section-heading" style="font-size: 2.4rem;">Catálogo Integral de Productos</h1>
+        <p class="section-subtitle">
+          Consulte la lista completa de nuestras 53 referencias lácteas, embutidos tradicionales y cortes especiales. 
+          Seleccione la tarifa deseada para visualizar el ahorro por escala de compra.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor Principal del Catálogo -->
+  <main class="catalog-section">
+
+    <!-- Barra de Herramientas, Categorías y Búsqueda -->
+    <div class="catalog-toolbar">
+      <!-- Categorías Tabs -->
+      <div class="category-tabs">
+        <button class="category-tab-btn active" data-cat="all" onclick="filterByCategory('all', this)">
+          <span>Todos (53)</span>
+        </button>
+        <button class="category-tab-btn" data-cat="lacteos" onclick="filterByCategory('lacteos', this)">
+          <span>🧀 Quesos y Lácteos</span>
+        </button>
+        <button class="category-tab-btn" data-cat="chorizos" onclick="filterByCategory('chorizos', this)">
+          <span>🥩 Chorizos y Cárnicos</span>
+        </button>
+        <button class="category-tab-btn" data-cat="ahumados" onclick="filterByCategory('ahumados', this)">
+          <span>🥓 Tocinetas y Ahumados</span>
+        </button>
+        <button class="category-tab-btn" data-cat="institucional" onclick="filterByCategory('institucional', this)">
+          <span>🏢 Formato Institucional</span>
+        </button>
+      </div>
+
+      <!-- Buscador y Ordenamiento -->
+      <div class="search-and-sort">
+        <div class="search-input-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Buscar por nombre, código o gramaje..." oninput="handleSearch()">
+        </div>
+
+        <select id="sortSelect" class="calc-select" style="max-width: 170px; padding: 10px 12px; font-size: 0.85rem;" onchange="handleSort()">
+          <option value="default">Recomendados</option>
+          <option value="price-asc">Precio: Menor a Mayor</option>
+          <option value="price-desc">Precio: Mayor a Menor</option>
+          <option value="name-asc">Nombre: A - Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Barra de Estado y Selector de Tarifa -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+      <div id="catalogCount" style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted);">
+        Mostrando 53 referencias
+      </div>
+
+      <div class="pricing-tier-switch">
+        <button class="tier-btn active" id="btnTierDetal" onclick="setCatalogTier('detal')">
+          <span>Ver Tarifa Detal</span>
+        </button>
+        <button class="tier-btn" id="btnTierWholesale" onclick="setCatalogTier('wholesale')">
+          <span>Ver Tarifa Mayorista x12</span>
+          <span class="badge-pill-yellow">Ahorro</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Grilla de Productos -->
+    <div class="products-grid" id="catalogGrid">
+      <!-- Inyectado dinámicamente con JS -->
+    </div>
+
+    <!-- Estado vacío de búsqueda -->
+    <div id="noResultsState" style="display: none; text-align: center; padding: 80px 20px; background: #FFFFFF; border-radius: var(--radius-lg); border: 1px dashed var(--border-medium); margin-top: 20px;">
+      <div style="font-size: 3rem; margin-bottom: 12px;">🔍</div>
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px;">No se encontraron productos</h3>
+      <p style="color: var(--text-muted); max-width: 450px; margin: 0 auto 20px;">
+        No pudimos encontrar coincidencias con el término buscado. Intenta con palabras más generales como "mozzarella", "chorizo" o "tajado".
+      </p>
+      <button class="btn-primary-lg" style="padding: 10px 24px; font-size: 0.9rem;" onclick="resetCatalogFilters()">Restablecer Filtros</button>
+    </div>
+
+  </main>
+
+  <!-- Slide-Over Drawer del Carrito -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="drawer-header">
+      <div class="drawer-title-box">
+        <h3>Tu Pedido</h3>
+        <span class="nav-badge-new">WhatsApp Directo</span>
+      </div>
+      <button class="btn-close-drawer" id="btnCloseDrawer" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="drawer-discount-banner" id="drawerDiscountBanner">
+      💡 <em>Añade 6 o 12 unidades para activar el precio mayorista por canastilla.</em>
+    </div>
+
+    <div class="drawer-items-list" id="drawerCartItems"></div>
+
+    <div class="drawer-footer">
+      <div class="customer-details-box">
+        <label style="font-size: 0.78rem; font-weight: 800; color: var(--text-main);">Datos para el Despacho:</label>
+        <input type="text" id="custName" class="customer-input" placeholder="Nombre completo o Razón Social" required>
+        <input type="text" id="custAddress" class="customer-input" placeholder="Dirección de entrega" required>
+        <input type="text" id="custCity" class="customer-input" placeholder="Ciudad / Barrio" required>
+        <input type="text" id="custNotes" class="customer-input" placeholder="Notas adicionales (Horario de recibo, NIT)">
+      </div>
+
+      <div class="drawer-totals-box">
+        <div class="drawer-total-row">
+          <span>Subtotal regular:</span>
+          <span id="drawerSubtotal">$ 0</span>
+        </div>
+        <div class="drawer-total-row drawer-savings-row">
+          <span>Ahorro aplicado:</span>
+          <span id="drawerSavings">$ 0</span>
+        </div>
+        <div class="drawer-total-row total-final">
+          <span>Total a Pagar:</span>
+          <span id="drawerTotal">$ 0</span>
+        </div>
+      </div>
+
+      <button class="btn-checkout-whatsapp" id="btnCheckoutWhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+        <span>Enviar Pedido a WhatsApp (+57 311 3066782)</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Botón Flotante Permanente de WhatsApp -->
+  <a href="https://wa.me/573113066782?text=Hola%20Distribuciones%20La%20Monta%C3%B1a%20SAS,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos" target="_blank" class="whatsapp-float-btn" title="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h4>DISTRIBUCIONES LA MONTAÑA SAS</h4>
+        <p>
+          Marca comercial: <strong>La Montaña Aaron</strong>.<br>
+          Distribución mayorista e institucional de quesos, carnes frías y alimentos refrigerados para toda Colombia.
+        </p>
+        <span class="footer-legal-tag">NIT: 901712016</span>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo Completo</a></li>
+          <li><a href="mayoristas.html">Canal Mayoristas &amp; HORECA</a></li>
+          <li><a href="nosotros.html">Historia y Calidad</a></li>
+          <li><a href="contacto.html">Zonas de Despacho</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Líneas de Producto</h5>
+        <ul class="footer-links">
+          <li><a href="catalogo.html?cat=lacteos">Quesos y Lácteos</a></li>
+          <li><a href="catalogo.html?cat=chorizos">Chorizos y Butifarras</a></li>
+          <li><a href="catalogo.html?cat=ahumados">Tocinetas y Jamones</a></li>
+          <li><a href="catalogo.html?cat=institucional">Línea Institucional</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Atención &amp; Pedidos</h5>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <span>📱 WhatsApp Oficial:</span>
+            <strong style="color: var(--color-accent);">+57 311 3066782</strong>
+          </div>
+          <div class="footer-contact-item">
+            <span>⏰ Horario de Atención:</span>
+            <span>Lunes a Sábado: 7:00 AM - 6:00 PM</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📍 Cobertura:</span>
+            <span>Bogotá D.C., Cundinamarca, Antioquia y Eje Cafetero</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div>© 2026 Distribuciones La Montaña SAS (NIT: 901712016). Todos los derechos reservados.</div>
+        <div>Cumplimiento de Buenas Prácticas de Manufactura (BPM) e Inocuidad Alimentaria Invima.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products-3d.js"></script>
+  <script>
+    let activeCategory = "all";
+    let activeCatalogTier = "detal"; // 'detal' o 'wholesale'
+    let searchTerm = "";
+    let sortMode = "default";
+    const catalogQuantities = {};
+
+    function setCatalogTier(tier) {
+      activeCatalogTier = tier;
+      document.getElementById("btnTierDetal").classList.toggle("active", tier === "detal");
+      document.getElementById("btnTierWholesale").classList.toggle("active", tier === "wholesale");
+      renderCatalog();
+    }
+
+    function filterByCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll(".category-tab-btn").forEach(b => b.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      renderCatalog();
+    }
+
+    function handleSearch() {
+      searchTerm = document.getElementById("searchInput").value.toLowerCase().trim();
+      renderCatalog();
+    }
+
+    function handleSort() {
+      sortMode = document.getElementById("sortSelect").value;
+      renderCatalog();
+    }
+
+    function resetCatalogFilters() {
+      activeCategory = "all";
+      searchTerm = "";
+      sortMode = "default";
+      document.getElementById("searchInput").value = "";
+      document.getElementById("sortSelect").value = "default";
+      document.querySelectorAll(".category-tab-btn").forEach((b, i) => b.classList.toggle("active", i === 0));
+      renderCatalog();
+    }
+
+    function adjustCatalogQty(id, delta) {
+      if (!catalogQuantities[id]) catalogQuantities[id] = 1;
+      catalogQuantities[id] = Math.max(1, catalogQuantities[id] + delta);
+      const display = document.getElementById(`cat-qty-${id}`);
+      if (display) display.textContent = catalogQuantities[id];
+    }
+
+    function addCatalogCardToCart(id) {
+      const qty = catalogQuantities[id] || 1;
+      addToCart(id, qty);
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById("catalogGrid");
+      const noResults = document.getElementById("noResultsState");
+      const countEl = document.getElementById("catalogCount");
+      if (!grid || typeof PRODUCTS_DATA === "undefined") return;
+
+      // Filtrado
+      let list = PRODUCTS_DATA.filter(p => {
+        const matchesCategory = activeCategory === "all" || p.category === activeCategory;
+        const matchesSearch = !searchTerm || 
+          p.name.toLowerCase().includes(searchTerm) || 
+          p.code.toLowerCase().includes(searchTerm) ||
+          p.presentation.toLowerCase().includes(searchTerm) ||
+          p.categoryName.toLowerCase().includes(searchTerm);
+        return matchesCategory && matchesSearch;
+      });
+
+      // Ordenamiento
+      if (sortMode === "price-asc") {
+        list.sort((a, b) => a.priceUnit - b.priceUnit);
+      } else if (sortMode === "price-desc") {
+        list.sort((a, b) => b.priceUnit - a.priceUnit);
+      } else if (sortMode === "name-asc") {
+        list.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      countEl.textContent = `Mostrando ${list.length} de ${PRODUCTS_DATA.length} referencias`;
+
+      if (list.length === 0) {
+        grid.style.display = "none";
+        noResults.style.display = "block";
+        return;
+      }
+
+      grid.style.display = "grid";
+      noResults.style.display = "none";
+
+      let html = "";
+      list.forEach(p => {
+        const displayPrice = activeCatalogTier === "wholesale"
+          ? (p.priceWholesale || p.price12 || p.priceUnit)
+          : p.priceUnit;
+
+        const badgeHtml = p.badge 
+          ? `<span class="card-badge-tag" style="background-color: ${p.badgeColor || '#C1121F'};">${p.badge}</span>` 
+          : '';
+
+        const inStockBadge = p.inStock
+          ? `<span style="font-size:0.7rem; color: #15803D; font-weight: 700; margin-left: 6px;">● En Stock</span>`
+          : `<span style="font-size:0.7rem; color: #DC2626; font-weight: 700; margin-left: 6px;">● Bajo Pedido</span>`;
+
+        html += `
+          <div class="product-card">
+            ${badgeHtml}
+            <div class="card-image-box" onclick="open3DViewerForProduct('${p.id}')" style="cursor: pointer;" title="Clic para ver en 3D 360°">
+              <img src="${p.image}" alt="${p.name}" loading="lazy">
+              <button class="btn-card-3d-inspect" onclick="open3DViewerForProduct('${p.id}'); event.stopPropagation();" title="Ver en 3D interactivo">
+                <span>👁️ 3D 360°</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <span class="card-category-sub">${p.categoryName}</span>
+                <span style="font-size: 0.7rem; color: #A1A1AA; font-weight: 700;">Ref: #${p.code}</span>
+              </div>
+
+              <h3 class="card-product-title" title="${p.name}">${p.name}</h3>
+
+              <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                <span class="card-presentation-pill">⚖️ ${p.presentation}</span>
+                ${inStockBadge}
+              </div>
+
+              <div class="card-pricing-box">
+                <div class="price-main-display">
+                  <span class="price-val">${formatCOP(displayPrice)}</span>
+                  <span class="price-unit-label">${activeCatalogTier === "wholesale" ? "Tarifa x12 / Canastilla" : "Precio Detal"}</span>
+                </div>
+                <div class="volume-tiers-row">
+                  <div class="tier-item">
+                    <span class="tier-badge">Detal</span>
+                    <span class="tier-price-val">${formatCOP(p.priceUnit)}</span>
+                  </div>
+                  <div class="tier-item">
+                    <span class="tier-badge">x6 Uds</span>
+                    <span class="tier-price-val">${formatCOP(p.price6)}</span>
+                  </div>
+                  <div class="tier-item highlight-wholesale">
+                    <span class="tier-badge">Canastilla</span>
+                    <span class="tier-price-val">${formatCOP(p.priceWholesale)}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-actions-row">
+                <div class="qty-stepper">
+                  <button class="btn-qty" onclick="adjustCatalogQty('${p.id}', -1)">−</button>
+                  <span class="qty-display" id="cat-qty-${p.id}">1</span>
+                  <button class="btn-qty" onclick="adjustCatalogQty('${p.id}', 1)">+</button>
+                </div>
+                <button class="btn-add-card" onclick="addCatalogCardToCart('${p.id}')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Agregar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      grid.innerHTML = html;
+      if (typeof init3DCardTilt === "function") init3DCardTilt();
+    }
+
+    // Comprobar parámetros de URL al cargar
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get("cat");
+      if (catParam) {
+        const tab = document.querySelector(`.category-tab-btn[data-cat="${catParam}"]`);
+        if (tab) {
+          filterByCategory(catParam, tab);
+          return;
+        }
+      }
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>
