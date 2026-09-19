@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="salamiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B" />
+      <stop offset="40%" stop-color="#B91C1C" />
+      <stop offset="80%" stop-color="#7F1D1D" />
+      <stop offset="100%" stop-color="#450A0A" />
+    </linearGradient>
+    <filter id="salShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="275" rx="140" ry="18" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#salShadow)">
+    <!-- Barra cilíndrica de Salchichón acostada diagonal o vertical -->
+    <!-- Cuerpo curvo / bastón de salchichón -->
+    <rect x="70" y="110" width="260" height="85" rx="42" fill="url(#salamiGrad)" stroke="#7F1D1D" stroke-width="2"/>
+
+    <!-- Amarres metálicos en los extremos (clips) -->
+    <rect x="62" y="145" width="14" height="16" rx="4" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5"/>
+    <path d="M56,153 L62,153" stroke="#64748B" stroke-width="2"/>
+    <rect x="324" y="145" width="14" height="16" rx="4" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5"/>
+    <path d="M338,153 L344,153" stroke="#64748B" stroke-width="2"/>
+
+    <!-- Malla o textura cárnica -->
+    <g opacity="0.25" stroke="#FFFFFF" stroke-width="1">
+      <line x1="100" y1="112" x2="130" y2="193"/>
+      <line x1="130" y1="112" x2="160" y2="193"/>
+      <line x1="160" y1="112" x2="190" y2="193"/>
+      <line x1="210" y1="112" x2="240" y2="193"/>
+      <line x1="240" y1="112" x2="270" y2="193"/>
+      <line x1="270" y1="112" x2="300" y2="193"/>
+    </g>
+
+    <!-- Faja / Anillo central de marca dorada y roja -->
+    <rect x="150" y="105" width="100" height="95" rx="6" fill="#FFB703" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="154" y="115" width="92" height="75" rx="4" fill="#C1121F"/>
+    
+    <text x="200" y="138" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="10" fill="#FFFFFF">SALCHICHÓN</text>
+    <text x="200" y="152" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" fill="#FFD166">CERVECERO</text>
+    <text x="200" y="165" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="8" fill="#FEE2E2">LA MONTAÑA AARON</text>
+    <text x="200" y="178" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" fill="#FEF08A">100% CARNE SELECCIONADA</text>
+
+    <!-- Rodajas de muestra al frente -->
+    <ellipse cx="110" cy="210" rx="35" ry="25" fill="#B91C1C" stroke="#7F1D1D" stroke-width="2"/>
+    <ellipse cx="110" cy="210" rx="30" ry="20" fill="#DC2626"/>
+    <!-- Pintas de grasa blanca del salchichón -->
+    <circle cx="95" cy="205" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="115" cy="202" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="125" cy="214" r="3" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="102" cy="218" r="2" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="112" cy="222" r="3" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+</svg>
