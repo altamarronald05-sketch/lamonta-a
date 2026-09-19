@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de fondo sol -->
+    <radialGradient id="sunGlow" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#FFE033" />
+      <stop offset="45%" stop-color="#FF9E00" />
+      <stop offset="100%" stop-color="#E5383B" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Gradiente montaña dorada -->
+    <linearGradient id="mountainGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF066" />
+      <stop offset="40%" stop-color="#FFB703" />
+      <stop offset="100%" stop-color="#FB8500" />
+    </linearGradient>
+
+    <!-- Gradiente sombra montaña -->
+    <linearGradient id="mountainShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#9A3412" />
+    </linearGradient>
+
+    <!-- Sombra suave para el texto -->
+    <filter id="textDropShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#5B0E0E" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- RAYOS DE SOL RADIANTES -->
+    <g transform="translate(240, 120)">
+      <!-- Rayos estilizados inspirados en el logo -->
+      <path d="M0,0 L-18,-105 L-3,-108 Z" fill="#FFAA00" opacity="0.9"/>
+      <path d="M0,0 L18,-105 L3,-108 Z" fill="#FFAA00" opacity="0.9"/>
+      <path d="M0,0 L-40,-95 L-25,-102 Z" fill="#FFB703" opacity="0.9"/>
+      <path d="M0,0 L40,-95 L25,-102 Z" fill="#FFB703" opacity="0.9"/>
+      <path d="M0,0 L-62,-80 L-48,-90 Z" fill="#FFC300" opacity="0.9"/>
+      <path d="M0,0 L62,-80 L48,-90 Z" fill="#FFC300" opacity="0.9"/>
+      <path d="M0,0 L-80,-60 L-68,-72 Z" fill="#FFD000" opacity="0.9"/>
+      <path d="M0,0 L80,-60 L68,-72 Z" fill="#FFD000" opacity="0.9"/>
+      <path d="M0,0 L-95,-36 L-84,-48 Z" fill="#FFAA00" opacity="0.9"/>
+      <path d="M0,0 L95,-36 L84,-48 Z" fill="#FFAA00" opacity="0.9"/>
+      <path d="M0,0 L-104,-10 L-96,-22 Z" fill="#FF9500" opacity="0.85"/>
+      <path d="M0,0 L104,-10 L96,-22 Z" fill="#FF9500" opacity="0.85"/>
+      
+      <!-- Círculo central sol -->
+      <circle cx="0" cy="0" r="42" fill="#FFE033" />
+      <circle cx="0" cy="0" r="42" fill="url(#sunGlow)" />
+    </g>
+
+    <!-- SILUETA DE MONTAÑAS -->
+    <!-- Sombra proyectada lateral de la montaña como en el logo -->
+    <polygon points="120,135 240,65 295,95 440,140 120,140" fill="#780000" opacity="0.4" />
+    
+    <!-- Montaña principal izquierda -->
+    <polygon points="160,138 238,62 268,138" fill="url(#mountainGold)" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="238,62 268,138 238,138" fill="url(#mountainShadow)" opacity="0.7" />
+
+    <!-- Montaña secundaria derecha -->
+    <polygon points="230,138 290,75 345,138" fill="url(#mountainGold)" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="290,75 345,138 290,138" fill="url(#mountainShadow)" opacity="0.65" />
+
+    <!-- Picos interiores y relieves -->
+    <polygon points="215,138 238,98 250,138" fill="#FFF066" opacity="0.8" />
+    <polygon points="275,138 290,105 305,138" fill="#FFF066" opacity="0.8" />
+
+    <!-- TEXTO: "La Montaña" -->
+    <text x="245" y="148" text-anchor="middle" font-family="'Georgia', 'Recoleta', 'Fraunces', serif" font-weight="900" font-style="italic" font-size="52" fill="#FFFDF5" stroke="#7A0C0C" stroke-width="3.5" paint-order="stroke fill" filter="url(#textDropShadow)" letter-spacing="1">
+      La Montaña
+    </text>
+
+    <!-- TEXTO: "A A R O N" -->
+    <text x="248" y="174" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="15" fill="#FFE8A3" letter-spacing="9" filter="url(#textDropShadow)">
+      A A R O N
+    </text>
+
+    <!-- SUBTÍTULO: DISTRIBUCIONES S.A.S. -->
+    <text x="248" y="193" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="9.5" fill="#FFFFFF" opacity="0.9" letter-spacing="3.5">
+      DISTRIBUCIONES S.A.S. · NIT 901712016
+    </text>
+  </g>
+</svg>
