@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sausageRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="50%" stop-color="#B91C1C" />
+      <stop offset="100%" stop-color="#7F1D1D" />
+    </linearGradient>
+    <filter id="choriShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1E1B4B" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="275" rx="140" ry="22" fill="#000000" opacity="0.1" />
+
+  <!-- Plato / tabla de madera estilizada -->
+  <ellipse cx="200" cy="235" rx="150" ry="40" fill="#78350F" stroke="#92400E" stroke-width="2" />
+  <ellipse cx="200" cy="230" rx="142" ry="36" fill="#B45309" opacity="0.4" />
+
+  <!-- Ristra de chorizos santarrosanos dorados -->
+  <g filter="url(#choriShadow)">
+    <!-- Chorizo 1 (Fondo) -->
+    <path d="M120,170 C135,140 220,130 270,165 C265,185 200,160 120,170 Z" fill="#991B1B" />
+    
+    <!-- Chorizo 2 (Medio) -->
+    <path d="M100,195 C115,160 215,150 290,190 C270,215 170,190 100,195 Z" fill="url(#sausageRed)" stroke="#7F1D1D" stroke-width="1.5" />
+    <!-- Hilos de atado tradicional -->
+    <ellipse cx="98" cy="195" rx="4" ry="7" fill="#FEF08A" />
+    <ellipse cx="292" cy="190" rx="4" ry="7" fill="#FEF08A" />
+
+    <!-- Chorizo 3 (Frontal principal) -->
+    <path d="M115,220 C135,185 240,175 305,215 C285,245 175,225 115,220 Z" fill="url(#sausageRed)" stroke="#450A0A" stroke-width="2" />
+    <ellipse cx="113" cy="220" rx="5" ry="8" fill="#FEF08A" />
+    <ellipse cx="307" cy="215" rx="5" ry="8" fill="#FEF08A" />
+
+    <!-- Marcas de parrilla y hierbas -->
+    <line x1="160" y1="200" x2="175" y2="218" stroke="#450A0A" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <line x1="200" y1="195" x2="215" y2="214" stroke="#450A0A" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <line x1="240" y1="195" x2="255" y2="212" stroke="#450A0A" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Hoja de cilantro / limón decorativo -->
+    <path d="M285,245 C305,230 330,240 325,255 C310,260 290,255 285,245 Z" fill="#84CC16" />
+    
+    <!-- Etiqueta distintiva -->
+    <rect x="70" y="70" width="130" height="30" rx="8" fill="#C1121F" />
+    <text x="135" y="86" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#FFB703">SANTARROSANO</text>
+    <text x="135" y="96" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" fill="#FFFFFF">100% CERDO SELECCIONADO</text>
+  </g>
+</svg>
