@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tubGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="tubShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="270" rx="120" ry="20" fill="#000000" opacity="0.1" />
+
+  <!-- Envase de Suero Costeño La Montaña -->
+  <g filter="url(#tubShadow)">
+    <!-- Cuerpo del tarro cónico -->
+    <path d="M125,120 L140,245 Q200,265 260,245 L275,120 Z" fill="url(#tubGrad)" stroke="#CBD5E1" stroke-width="1.5" />
+    
+    <!-- Etiqueta envolvente verde / artesanal -->
+    <path d="M128,140 L137,220 Q200,238 263,220 L272,140 Q200,155 128,140 Z" fill="#059669" />
+    <path d="M129,145 L136,215 Q200,232 264,215 L271,145 Q200,160 129,145 Z" fill="#047857" />
+
+    <!-- Sol y Montañas en etiqueta -->
+    <circle cx="200" cy="165" r="14" fill="#FFB703" />
+    <polygon points="185,178 200,162 215,178" fill="#FFFFFF" />
+    
+    <text x="200" y="195" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF">SUERO COSTEÑO</text>
+    <text x="200" y="208" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" fill="#FEF08A">LA MONTAÑA TRADICIONAL</text>
+
+    <!-- Tapa superior del envase con relieve -->
+    <ellipse cx="200" cy="118" rx="80" ry="22" fill="#059669" stroke="#047857" stroke-width="2" />
+    <ellipse cx="200" cy="115" rx="74" ry="18" fill="#10B981" />
+    <text x="200" y="119" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" fill="#FFFFFF">RECETA ARTESANAL</text>
+
+    <!-- Gotas de cremosidad y cuchara de madera ilustrada al lado -->
+    <path d="M290,140 C280,180 300,240 315,260 C322,255 315,220 305,180 Z" fill="#D97706" opacity="0.8" />
+  </g>
+</svg>
