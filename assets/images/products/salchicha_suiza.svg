@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="suizaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C2410C" />
+      <stop offset="50%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#9A3412" />
+    </linearGradient>
+    <filter id="suizaShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="275" rx="130" ry="18" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#suizaShadow)">
+    <!-- Paquete al vacío rectangular transparente -->
+    <rect x="80" y="55" width="240" height="205" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+
+    <!-- Etiqueta superior verde y dorada (tradición alpina) -->
+    <path d="M80,69 Q80,55 94,55 L306,55 Q320,55 320,69 L320,105 L80,105 Z" fill="#15803D" />
+    <text x="200" y="80" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" fill="#FEF08A">SALCHICHA SUIZA ARTESANAL</text>
+    <text x="200" y="95" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#FFFFFF" letter-spacing="1">RECETA TRADICIONAL AHUMADA</text>
+
+    <!-- 4 Salchichas suizas gruesas en fila dentro del empaque -->
+    <g transform="translate(100, 115)">
+      <!-- Salchicha 1 -->
+      <rect x="0" y="5" width="42" height="110" rx="21" fill="url(#suizaGrad)" stroke="#9A3412" stroke-width="1.5"/>
+      <path d="M5,40 Q21,48 37,40" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M5,70 Q21,78 37,70" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+      
+      <!-- Salchicha 2 -->
+      <rect x="52" y="5" width="42" height="110" rx="21" fill="url(#suizaGrad)" stroke="#9A3412" stroke-width="1.5"/>
+      <path d="M57,40 Q73,48 89,40" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M57,70 Q73,78 89,70" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+      <!-- Salchicha 3 -->
+      <rect x="104" y="5" width="42" height="110" rx="21" fill="url(#suizaGrad)" stroke="#9A3412" stroke-width="1.5"/>
+      <path d="M109,40 Q125,48 141,40" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M109,70 Q125,78 141,70" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+      <!-- Salchicha 4 -->
+      <rect x="156" y="5" width="42" height="110" rx="21" fill="url(#suizaGrad)" stroke="#9A3412" stroke-width="1.5"/>
+      <path d="M161,40 Q177,48 193,40" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M161,70 Q177,78 193,70" stroke="#7C2D12" stroke-width="1.5" fill="none" opacity="0.6"/>
+    </g>
+
+    <!-- Sello inferior de calidad -->
+    <rect x="145" y="240" width="110" height="18" rx="9" fill="#FFB703"/>
+    <text x="200" y="253" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="8" fill="#780000">4 UNIDADES GRUESAS</text>
+  </g>
+</svg>
