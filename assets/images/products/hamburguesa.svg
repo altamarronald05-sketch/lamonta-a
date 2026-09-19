@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pattyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7F1D1D" />
+      <stop offset="40%" stop-color="#991B1B" />
+      <stop offset="100%" stop-color="#450A0A" />
+    </linearGradient>
+    <filter id="pattyShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="280" rx="135" ry="18" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#pattyShadow)">
+    <!-- Paquete al vacío transparente -->
+    <rect x="80" y="55" width="240" height="210" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+
+    <!-- Etiqueta superior negra carbón y fuego dorado -->
+    <path d="M80,69 Q80,55 94,55 L306,55 Q320,55 320,69 L320,108 L80,108 Z" fill="#18181B" />
+    <text x="200" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="11" fill="#FFB703">HAMBURGUESA AHUMADA</text>
+    <text x="200" y="96" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" fill="#DC2626">LINEA PARRILLERA GOURMET</text>
+
+    <!-- Torre de carnes de hamburguesa apiladas con separadores -->
+    <g transform="translate(115, 120)">
+      <!-- Carne base -->
+      <ellipse cx="85" cy="100" rx="75" ry="24" fill="url(#pattyGrad)" stroke="#450A0A" stroke-width="2"/>
+      <ellipse cx="85" cy="98" rx="73" ry="22" fill="none" stroke="#FEF08A" stroke-width="1" stroke-dasharray="3,8" opacity="0.3"/>
+      <!-- Separador plástico -->
+      <ellipse cx="85" cy="85" rx="77" ry="22" fill="#E2E8F0" opacity="0.5"/>
+
+      <!-- Carne 2 -->
+      <ellipse cx="85" cy="75" rx="75" ry="24" fill="url(#pattyGrad)" stroke="#450A0A" stroke-width="2"/>
+      <ellipse cx="85" cy="60" rx="77" ry="22" fill="#E2E8F0" opacity="0.5"/>
+
+      <!-- Carne 3 (Superior visible con marcas de parrilla) -->
+      <ellipse cx="85" cy="48" rx="75" ry="25" fill="url(#pattyGrad)" stroke="#450A0A" stroke-width="2"/>
+      <!-- Marcas de parrilla -->
+      <line x1="45" y1="42" x2="125" y2="54" stroke="#1F2937" stroke-width="3" opacity="0.7"/>
+      <line x1="35" y1="50" x2="115" y2="62" stroke="#1F2937" stroke-width="3" opacity="0.7"/>
+      <line x1="55" y1="34" x2="135" y2="46" stroke="#1F2937" stroke-width="3" opacity="0.7"/>
+    </g>
+
+    <!-- Sello de 6 unidades y 100% res y cerdo -->
+    <circle cx="280" cy="225" r="22" fill="#C1121F" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="280" y="222" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF">6</text>
+    <text x="280" y="233" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" fill="#FEF08A">UNIDADES</text>
+  </g>
+</svg>
