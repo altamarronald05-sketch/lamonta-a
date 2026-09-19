@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="baconStripe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B" />
+      <stop offset="25%" stop-color="#EF4444" />
+      <stop offset="45%" stop-color="#FEF08A" />
+      <stop offset="65%" stop-color="#B91C1C" />
+      <stop offset="85%" stop-color="#FEF9C3" />
+      <stop offset="100%" stop-color="#7F1D1D" />
+    </linearGradient>
+    <filter id="baconShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#18181B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="275" rx="140" ry="20" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#baconShadow)">
+    <!-- Paquete al vacío rectangular transparente -->
+    <rect x="70" y="55" width="260" height="205" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+    
+    <!-- Etiqueta superior negra con detalles dorados (estilo gourmet) -->
+    <path d="M70,69 Q70,55 84,55 L316,55 Q330,55 330,69 L330,105 L70,105 Z" fill="#18181B" />
+    <text x="200" y="80" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="11" fill="#FFB703">TOCINETA AHUMADA ESPECIAL</text>
+    <text x="200" y="95" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#F4F4F5" letter-spacing="1">CURADA Y AHUMADA EN LEÑA NOBLE</text>
+
+    <!-- Ventana con láminas de tocineta con ondulaciones de grasa y carne magra -->
+    <g transform="translate(85, 115)">
+      <!-- Tira 1 -->
+      <path d="M0,8 Q55,-5 115,8 T230,8 L230,28 Q170,15 115,28 T0,28 Z" fill="url(#baconStripe)" stroke="#7F1D1D" stroke-width="1"/>
+      <!-- Tira 2 -->
+      <path d="M0,35 Q55,22 115,35 T230,35 L230,55 Q170,42 115,55 T0,55 Z" fill="url(#baconStripe)" stroke="#7F1D1D" stroke-width="1"/>
+      <!-- Tira 3 -->
+      <path d="M0,62 Q55,49 115,62 T230,62 L230,82 Q170,69 115,82 T0,82 Z" fill="url(#baconStripe)" stroke="#7F1D1D" stroke-width="1"/>
+      <!-- Tira 4 -->
+      <path d="M0,89 Q55,76 115,89 T230,89 L230,109 Q170,96 115,109 T0,109 Z" fill="url(#baconStripe)" stroke="#7F1D1D" stroke-width="1"/>
+    </g>
+
+    <!-- Sello de Crujiente Hamburguesas -->
+    <circle cx="120" cy="215" r="20" fill="#C1121F" />
+    <text x="120" y="212" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="8" fill="#FFB703">CALIDAD</text>
+    <text x="120" y="222" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" fill="#FFFFFF">BURGER</text>
+  </g>
+</svg>
