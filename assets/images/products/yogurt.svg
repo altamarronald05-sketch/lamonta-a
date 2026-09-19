@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="yogurtBottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="30%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="berryGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BE185D" />
+      <stop offset="100%" stop-color="#831843" />
+    </linearGradient>
+    <filter id="yShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="285" rx="100" ry="16" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#yShadow)">
+    <!-- Tapa rosca dorada/roja -->
+    <rect x="175" y="30" width="50" height="20" rx="4" fill="#C1121F" stroke="#991B1B" stroke-width="1.5"/>
+    <line x1="182" y1="33" x2="182" y2="47" stroke="#FEF08A" stroke-width="1.5"/>
+    <line x1="190" y1="33" x2="190" y2="47" stroke="#FEF08A" stroke-width="1.5"/>
+    <line x1="200" y1="33" x2="200" y2="47" stroke="#FEF08A" stroke-width="1.5"/>
+    <line x1="210" y1="33" x2="210" y2="47" stroke="#FEF08A" stroke-width="1.5"/>
+    <line x1="218" y1="33" x2="218" y2="47" stroke="#FEF08A" stroke-width="1.5"/>
+    <rect x="170" y="47" width="60" height="6" rx="2" fill="#780000"/>
+
+    <!-- Cuello de botella -->
+    <path d="M178,53 Q175,75 160,95 L145,130 Q135,160 135,220 Q135,275 160,278 L240,278 Q265,275 265,220 Q265,160 255,130 L240,95 Q225,75 222,53 Z" fill="url(#yogurtBottle)" stroke="#CBD5E1" stroke-width="2"/>
+
+    <!-- Etiqueta corporativa -->
+    <path d="M136,130 C136,130 170,138 200,138 C230,138 264,130 264,130 L264,240 C264,240 230,248 200,248 C170,248 136,240 136,240 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Franja superior de marca -->
+    <path d="M136,130 C136,130 170,138 200,138 C230,138 264,130 264,130 L264,168 C264,168 230,174 200,174 C170,174 136,168 136,168 Z" fill="#C1121F"/>
+    
+    <text x="200" y="152" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF">LA MONTAÑA AARON</text>
+    <text x="200" y="165" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#FFB703" letter-spacing="1">YOGURT ENTERO CREMOSO</text>
+
+    <!-- Ilustración de frutos rojos / melocotón -->
+    <circle cx="185" cy="205" r="16" fill="url(#berryGrad)"/>
+    <circle cx="210" cy="200" r="14" fill="#9D174D"/>
+    <circle cx="200" cy="216" r="12" fill="#BE185D"/>
+    <!-- Gotas de leche -->
+    <path d="M200,180 Q204,188 200,192 Q196,188 200,180 Z" fill="#F8FAFC"/>
+
+    <!-- Gramaje -->
+    <rect x="175" y="255" width="50" height="15" rx="7" fill="#FFB703"/>
+    <text x="200" y="266" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" fill="#780000">1.000 g</text>
+  </g>
+</svg>
