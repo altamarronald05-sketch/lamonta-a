@@ -1,0 +1,19 @@
+{
+  "name": "la-montana-aaron-web",
+  "version": "1.0.0",
+  "description": "Portal Web y Catálogo Interactivo B2B/B2C con checkout a WhatsApp y Visor 3D para Distribuciones La Montaña SAS (NIT: 901712016)",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "npx vercel --prod"
+  },
+  "keywords": [
+    "la-montana-aaron",
+    "distribuciones-la-montana",
+    "catalogo-lacteos",
+    "queso-mozzarella",
+    "chorizo-santarrosano",
+    "colombia-horeca"
+  ],
+  "author": "Distribuciones La Montaña SAS",
+  "license": "ISC"
+}
