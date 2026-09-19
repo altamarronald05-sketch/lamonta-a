@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="sackShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="285" rx="130" ry="18" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#sackShadow)">
+    <!-- Bolsón de polietileno de alta resistencia -->
+    <path d="M120,70 Q130,55 200,55 Q270,55 280,70 L300,245 Q295,275 200,275 Q105,275 100,245 Z" fill="url(#sackGrad)" stroke="#CBD5E1" stroke-width="2"/>
+
+    <!-- Amarre / Precinto de seguridad superior -->
+    <rect x="180" y="48" width="40" height="12" rx="4" fill="#EAB308" stroke="#CA8A04" stroke-width="1"/>
+    <path d="M190,60 L185,85 L215,85 L210,60 Z" fill="#CA8A04"/>
+
+    <!-- Transparencia para ver butifarras / chorizos dentro -->
+    <ellipse cx="200" cy="185" rx="75" ry="50" fill="#FFE4E6" opacity="0.6" stroke="#FECDD3" stroke-dasharray="4,4"/>
+    
+    <!-- Siluetas de butifarras o choricitos agrupados -->
+    <ellipse cx="170" cy="170" rx="14" ry="10" fill="#991B1B" opacity="0.8"/>
+    <ellipse cx="195" cy="165" rx="14" ry="10" fill="#B91C1C" opacity="0.8"/>
+    <ellipse cx="225" cy="172" rx="14" ry="10" fill="#991B1B" opacity="0.8"/>
+    <ellipse cx="160" cy="190" rx="14" ry="10" fill="#7F1D1D" opacity="0.8"/>
+    <ellipse cx="188" cy="188" rx="14" ry="10" fill="#DC2626" opacity="0.8"/>
+    <ellipse cx="218" cy="186" rx="14" ry="10" fill="#991B1B" opacity="0.8"/>
+    <ellipse cx="240" cy="195" rx="12" ry="9" fill="#7F1D1D" opacity="0.8"/>
+
+    <!-- Etiqueta Oficial HORECA -->
+    <rect x="135" y="95" width="130" height="50" rx="8" fill="#18181B" stroke="#FFB703" stroke-width="1.5"/>
+    <text x="200" y="113" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#FFB703">FORMATO INSTITUCIONAL</text>
+    <text x="200" y="127" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#FFFFFF">LA MONTAÑA AARON</text>
+    <text x="200" y="138" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" fill="#E2E8F0">PAQUETE POR VOLUMEN / B2B</text>
+
+    <!-- Sello de rendimiento -->
+    <rect x="155" y="240" width="90" height="20" rx="10" fill="#C1121F"/>
+    <text x="200" y="254" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#FFFFFF">ALTO RENDIMIENTO</text>
+  </g>
+</svg>
