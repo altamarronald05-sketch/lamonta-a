@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mexicanRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="50%" stop-color="#991B1B" />
+      <stop offset="100%" stop-color="#7F1D1D" />
+    </linearGradient>
+    <filter id="mexShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#450A0A" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="270" rx="130" ry="20" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#mexShadow)">
+    <!-- Bandeja sellada -->
+    <rect x="75" y="65" width="250" height="195" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+    <rect x="85" y="75" width="230" height="40" rx="8" fill="#991B1B" />
+    <text x="200" y="96" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="12" fill="#FEF08A">CHORIZO MEXICANO</text>
+    <text x="200" y="108" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#FFFFFF">CON ESPECIAS Y PIMENTÓN ROJO</text>
+
+    <!-- Chorizos alineados en la bandeja al vacío -->
+    <g transform="translate(105, 125)">
+      <!-- Chorizo 1 -->
+      <rect x="0" y="0" width="32" height="110" rx="16" fill="url(#mexicanRed)" stroke="#7F1D1D" stroke-width="1.5" />
+      <!-- Chorizo 2 -->
+      <rect x="38" y="0" width="32" height="110" rx="16" fill="url(#mexicanRed)" stroke="#7F1D1D" stroke-width="1.5" />
+      <!-- Chorizo 3 -->
+      <rect x="76" y="0" width="32" height="110" rx="16" fill="url(#mexicanRed)" stroke="#7F1D1D" stroke-width="1.5" />
+      <!-- Chorizo 4 -->
+      <rect x="114" y="0" width="32" height="110" rx="16" fill="url(#mexicanRed)" stroke="#7F1D1D" stroke-width="1.5" />
+      <!-- Chorizo 5 -->
+      <rect x="152" y="0" width="32" height="110" rx="16" fill="url(#mexicanRed)" stroke="#7F1D1D" stroke-width="1.5" />
+    </g>
+
+    <!-- Sello de picante medio -->
+    <circle cx="115" cy="225" r="18" fill="#FFB703" />
+    <text x="115" y="224" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#780000">SABOR</text>
+    <text x="115" y="234" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" fill="#780000">PARRILLERO</text>
+  </g>
+</svg>
