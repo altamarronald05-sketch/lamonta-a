@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hamRoast" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9A3412" />
+      <stop offset="30%" stop-color="#C2410C" />
+      <stop offset="70%" stop-color="#7C2D12" />
+      <stop offset="100%" stop-color="#451A03" />
+    </linearGradient>
+    <filter id="pShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="200" cy="280" rx="140" ry="18" fill="#000000" opacity="0.1" />
+
+  <g filter="url(#pShadow)">
+    <!-- Bandeja o soporte dorada -->
+    <ellipse cx="200" cy="245" rx="135" ry="30" fill="#FEF08A" stroke="#CA8A04" stroke-width="2"/>
+
+    <!-- Gran Pernil Ahumado Horneado -->
+    <path d="M120,225 C80,180 100,120 160,105 C200,95 270,120 290,165 C305,200 280,240 220,245 C170,250 135,245 120,225 Z" fill="url(#hamRoast)" stroke="#451A03" stroke-width="2"/>
+
+    <!-- Rombo glaseado de clavos y caramelo con líneas doradas -->
+    <g stroke="#FEF08A" stroke-width="1.2" opacity="0.4">
+      <line x1="140" y1="130" x2="250" y2="210"/>
+      <line x1="160" y1="120" x2="270" y2="195"/>
+      <line x1="185" y1="115" x2="285" y2="175"/>
+      
+      <line x1="250" y1="125" x2="150" y2="215"/>
+      <line x1="230" y1="115" x2="135" y2="190"/>
+      <line x1="270" y1="145" x2="175" y2="230"/>
+    </g>
+
+    <!-- Hueso con capuchón blanco festivo -->
+    <path d="M100,140 L70,115 C62,108 50,115 55,125 L75,150 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+    <ellipse cx="60" cy="115" rx="10" ry="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+
+    <!-- Faja de etiqueta navideña y gourmet -->
+    <rect x="180" y="160" width="100" height="50" rx="8" fill="#15803D" stroke="#FFB703" stroke-width="1.5"/>
+    <text x="230" y="180" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="10" fill="#FFB703">PERNIL AHUMADO</text>
+    <text x="230" y="195" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" fill="#FFFFFF">EDICIÓN GOURMET</text>
+    <text x="230" y="204" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="6.5" fill="#FEF08A">LA MONTAÑA AARON</text>
+  </g>
+</svg>
